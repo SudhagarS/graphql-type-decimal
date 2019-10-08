@@ -1,37 +1,37 @@
-# graphql-type-datetime [![npm version](https://badge.fury.io/js/graphql-type-datetime.svg)](http://badge.fury.io/js/graphql-type-datetime)
+# graphql-type-decimal
 
-DateTime scalar type for [GraphQL.js](https://github.com/graphql/graphql-js), following the ISO 8601 format.
+Decimal scalar type for [GraphQL.js](https://github.com/graphql/graphql-js) primarily for currencies.
 
-Ex: `2018-05-28T10:26:39.359Z`
+Ex: `21.01`
 
 ## Usage
 
-This package exports a DateTime scalar GraphQL.js type:
+This package exports a Decimal scalar GraphQL.js type:
 
 ```js
-import GraphQLDateTime from 'graphql-type-datetime';
+import GraphQLDecimal from 'graphql-type-decimal';
 ```
 
 ### SDL with [GraphQL-tools](https://github.com/apollographql/graphql-tools)
 
-When using the SDL with GraphQL-tools, define `GraphQLDateTime` as the resolver for the appropriate scalar type in your schema:
+When using the SDL with GraphQL-tools, define `GraphQLDecimal` as the resolver for the appropriate scalar type in your schema:
 
 ```js
 import { makeExecutableSchema } from 'graphql-tools';
-import GraphQLDateTime from 'graphql-type-datetime';
+import GraphQLDecimal from 'graphql-type-decimal';
 
 const typeDefs = `
-scalar DateTime
+scalar Decimal
 
 type MyType {
-  myField: DateTime
+  myField: Decimal
 }
 
 # ...
 `;
 
 const resolvers = {
-  DateTime: GraphQLDateTime,
+  Decimal: GraphQLDecimal,
 };
 
 export default makeExecutableSchema({ typeDefs, resolvers });
@@ -40,8 +40,8 @@ export default makeExecutableSchema({ typeDefs, resolvers });
 
 ## Dependency
 
-To validate and parse the date with an ISO 8601 format, this library uses [Moment.js](https://github.com/moment/moment)
+This library uses [bigdecimal.js](https://github.com/MikeMcl/bignumber.js/)
 
 ## Related
 
-This repository is inspired by [graphql-type-json](https://github.com/taion/graphql-type-json) and [graphql-iso-date](https://github.com/excitement-engineer/graphql-iso-date)
+This repository is inspired by [graphql-type-datetime](https://github.com/taion/graphql-type-json)

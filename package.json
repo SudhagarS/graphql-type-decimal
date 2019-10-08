@@ -1,7 +1,7 @@
 {
-  "name": "graphql-type-datetime",
-  "version": "0.2.4",
-  "description": "DateTime scalar type for GraphQL.js",
+  "name": "graphql-type-decimal",
+  "version": "1.0.0",
+  "description": "Decimal scalar type for GraphQL.js",
   "files": [
     "lib"
   ],
@@ -13,19 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waitandseeagency/graphql-type-datetime.git"
+    "url": "git+https://github.com/sudhagars/graphql-type-decimal.git"
   },
   "keywords": [
     "graphql",
     "scalar",
-    "datetime"
+    "decimal"
   ],
-  "author": "Johann Pinson",
+  "author": "Sudhagar @ Cleartax",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/waitandseeagency/graphql-type-datetime/issues"
+    "url": "https://github.com/sudhagars/graphql-type-decimal/issues"
   },
-  "homepage": "https://github.com/waitandseeagency/graphql-type-datetime#readme",
+  "homepage": "https://github.com/sudhagars/graphql-type-decimal#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
@@ -38,10 +38,11 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "moment": "^2.22.2"
+    "bignumber.js": "^9.0.0",
+    "graphql": "^14.5.8"
   },
   "peerDependencies": {
-    "graphql": "^0.13.2"
+    "graphql": "^14.5.6"
   },
   "config": {
     "commitizen": {
