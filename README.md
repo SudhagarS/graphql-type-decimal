@@ -40,7 +40,7 @@ export default makeExecutableSchema({ typeDefs, resolvers });
 
 ## Dependency
 
-This library uses [bigdecimal.js](https://github.com/MikeMcl/bignumber.js/)
+This library uses [bignumber.js](https://github.com/MikeMcl/bignumber.js/)
 
 ## Related
 
