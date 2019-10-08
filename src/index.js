@@ -9,7 +9,7 @@ export default new GraphQLScalarType({
 
   serialize(value) {
     // value sent to the client
-    return value
+    return new BigDecimal(value).toPrecision(2)
   },
 
   parseValue(value) {
